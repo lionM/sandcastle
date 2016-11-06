@@ -1,23 +1,23 @@
 {
-  "name": "sandcastle",
+  "name": "sandcastle_multiApp",
   "directories": {
     "lib": "./lib",
     "bin": "./bin"
   },
   "main": "./lib/index.js",
   "bin": "./bin/sandcastle.js",
-  "version": "1.3.3",
-  "author": "Ben Coe <bencoe@gmail.com>",
+  "version": "1.0.0",
+  "author": "lion update, [original author: Ben Coe <bencoe@gmail.com>]",
   "engines": [
     "node"
   ],
-  "description": "A simple and powerful sandbox for running untrusted JavaScript.",
+  "description": "A simple and powerful sandbox for running untrusted JavaScript. Update support multiple applications on a single server",
   "keywords": [
     "sandbox"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/bcoe/sandcastle.git"
+    "url": "git://github.com/lionM/sandcastle.git"
   },
   "scripts": {
     "coverage": "./node_modules/.bin/mocha test/* --require blanket --colors --timeout=10000 -R html-cov > coverage.html",

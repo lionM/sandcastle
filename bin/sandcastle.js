@@ -2,12 +2,16 @@
 
 var sandcastle = require('../lib'),
   argv = require('optimist').argv,
-  mode = argv._.shift();
+  mode = argv._.shift(),
+  crypto = require('crypto');
+
+var cwdMd5 = crypto.createHash('md5').update( process.cwd() ).digest('hex');
+var socketPath = '/tmp/sandcastle_'+ cwdMd5 +'.sock';
 
 switch (mode) {
   case 'sandbox':
     (new sandcastle.Sandbox({
-        socket: (argv.socket || '/tmp/sandcastle.sock')
+        socket: (argv.socket || socketPath)
     })).start();
     break;
   default:
